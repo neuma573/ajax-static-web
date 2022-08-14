@@ -1,3 +1,20 @@
+function ajaxPostAction() {
+    var queryString = $("form[name=signup]").serialize() ;
+
+    $.ajax({
+        type : 'post',
+        url : 'https://httpbin.org/post',
+        data : queryString,
+        dataType : 'json',
+        error: function(xhr, status, error){
+            alert(error);
+        },
+        success : function(json){
+            console.log(json);
+        }
+    });
+}
+
 function formValidation() {
     clearErrors();
     let result=false;
@@ -12,7 +29,7 @@ function formValidation() {
     validateCity(city)) {
         result=true;
     }
-    return result;
+    ajaxPostAction();
 }
 
 function clearErrors() {
@@ -47,15 +64,25 @@ xxx-xxx-xxxx, for example 111-111-1111.*/
 function validatePhoneNumber(Phone) {
     let errors = document.querySelector("#errors");
     let regex = /^(?:\(\d{3}\)|\d{3}-)\d{3}-\d{4}$/;
+    if(!regex.test(Phone)){
+        alert("Wrong formation of Phone number");
+        return false;
+      }
 
-
-    return regex.test(Phone);
+    return true;
 }
 // pattern="^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$"
 /*G: only Canadian format allowed (Letter Digit Letter Digit Letter Digit
 and the length must be 6), for example C1A1A7. */
 function validateZipcode(zipCode) {
     let errors = document.querySelector("#errors");
+    let regex = /^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$/;
+    if(!regex.test(zipCode)){
+        alert("Wrong formation of Zipcode");
+        return false;
+      }
+
+    return true;
 
 } 
 

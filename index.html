@@ -6,6 +6,7 @@
     <title>NAVIGATION</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <nav>
@@ -131,7 +132,7 @@
     
     
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required/>
+                    <input type="password" id="password" name="password" required/>
     
                     <label for="checkpassword">Check Password</label>
                     <input type="password" id="checkpassword" name="checkpassword" required/>
@@ -139,7 +140,7 @@
                     <input type="hidden" name="lastName" id="lastName" value="Lim" />
                     <input type="hidden" name="studentId" id="studentId" value="149814212" />
     
-                <button type="submit" name="submit" value="Submit">Submit</button>
+                <button  onclick="formValidation()">Submit</button>
                 <button type="reset" name="reset" value="  Clear  " onclick="clearErrors()">Reset</button>
     
                 <div id="errors"></div>
