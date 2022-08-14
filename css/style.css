@@ -1,0 +1,288 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* 요소의 최소 너비 지정, height 속성 무시
+    vh단위는 브라우저 안쪽 높이(window.innerHeight)을 기준으로
+    설정된다. 하지만 태블릿이나, 모바일의 경우에는 뷰 포트에 따라
+    맞춰짐*/
+  min-height: 8vh;
+  background-color: #504954;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  /* 각 글자 2px씩 간격을 줌*/
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: max-content 200px 1fr;
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+.card h2 {
+  margin: 0;
+  padding: 0.5rem;
+}
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.card .content {
+  padding: 0.5rem;
+}
+#wrap {
+  position: relative;
+  margin: auto;
+  letter-spacing: -.2px;
+}
+#bottom_footer {
+  display: flex;
+  background-color: #504954;
+  margin-top:100px;
+  justify-content: space-around;
+  min-height: 8vh;
+
+}
+footer p {
+  text-align: center;
+  margin: 1% 1% 1% 1%;
+  color: aliceblue;
+}
+h1 {
+  margin: 30px;
+  border: 30px solid #dddddd;
+  padding: 30px;
+}
+.main.style1 {
+  background: #fff;
+}
+.main {
+padding: 6em 0 4em 0;
+}
+.container {
+margin: 0 auto;
+max-width: 1100px;
+width: 90em;
+}
+@media screen and (max-width: 1680px) {
+  .container {
+    margin: 0 auto;
+    max-width: 90%;
+    width: 90em;
+    }
+}
+@media screen and (max-width: 1680px) {
+.row.gtr-150 {
+  margin-top: 0;
+  margin-left: -3em;
+}
+}
+
+@media screen and (max-width: 1680px){
+.row {
+  margin-top: 0;
+  margin-left: -2em;
+}
+}
+@media screen and (max-width: 1680px){
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+}
+.row {
+margin-top: 0;
+margin-left: -2em;
+}
+.row {
+display: flex;
+flex-wrap: wrap;
+box-sizing: border-box;
+align-items: stretch;
+}
+@media screen and (max-width: 1680px){
+.row.gtr-150 > * {
+  padding: 0 0 0 3em;
+}
+}
+.row.gtr-150 > * {
+padding: 0 0 0 3em;
+}
+.row > .col-6 {
+width: 50%;
+}
+@media screen and (max-width: 1680px){
+.row > * {
+  padding: 0 0 0 2em;
+  box-sizing: border-box;
+}
+}
+.row > * {
+padding: 0 0 0 2em;
+}
+header.major {
+margin: 0 0 1em 0;
+}
+header.major:after {
+background: rgba(144, 144, 144, 0.5);
+content: '';
+display: inline-block;
+height: 1px;
+margin-top: 1.5em;
+width: 6em;
+}
+.image img {
+border-radius: 4px;
+display: block;
+}
+.image.fit {
+display: block;
+margin: 0 0 2em 0;
+width: 100%;
+}
+.image {
+border-radius: 4px;
+border: 0;
+display: inline-block;
+position: relative;
+}
+.main.style2 {
+background-color: #333;
+color: rgba(255, 255, 255, 0.75);
+background-attachment: fixed, fixed;
+background-image: url(../img/header.png), url(../img/header.jpg);
+background-size: auto, cover;
+}
+section.special, article.special {
+text-align: center;
+}
+section {
+padding: 6em 1em 4em 1em;
+}
+@media screen and (max-width: 980px){
+.row > .col-12-medium {
+  width: 100%;
+}
+}
+.image.fit img {
+width: 100%;
+}
+
+.iframe_div {
+position: relative;
+padding-top: 56%;
+width: 100%;
+height: 0;
+}
+
+/* iframe */
+div > iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+@media screen and (max-width: 980px){
+.row > .imp-medium {
+  order: -1;
+}}
+table, td, th {
+border-collapse : collapse;
+border : 1px solid black;
+margin: auto;
+}
+
+label{
+  white-space:pre;
+}

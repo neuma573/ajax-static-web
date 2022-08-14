@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAVIGATION</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-links">
+		<li><a href="./index.html">Home</a></li>
+		<li><a href="./interests.html">Interests</a></li>
+		<li><a href="./expertise.html">Expertise</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <script src="js/app.js"></script>
+    <script src="js/registration.js"></script>
+    <div id='wrap'>
+    	<section>
+        <div class="container">
+            <h2>Hello, My name is Hong Gil Dong.</h2>
+
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                    </div>
+        </section>
+    
+    <section  class="main style2 special">
+      <div class="container">
+        <header class="major">
+          <h2>Ipsum feugiat consequat?</h2>
+        </header>
+        <p>Sed lacus nascetur ac ante amet sapien.</p>
+      </div>
+    </section>
+    <section  class="main style2 special">
+      <div class="container">
+        <table align="center">
+          <tbody>
+            <tr>
+              <td >Cell 1x1</td>
+              <td >Cell 2x1</td>
+              <td >Cell 3x1</td>
+              <td >Cell 4x1</td>
+            </tr>
+            <tr>
+              <td >Cell 1x2</td>
+              <td >Cell 2x2</td>
+              <td >Cell 3x2</td>
+              <td >Cell 4x2</td>
+            </tr>
+            <tr>
+              <td >Cell 1x3</td>
+              <td >Cell 2x3</td>
+              <td >Cell 3x3</td>
+              <td >Cell 4x3</td>
+            </tr>
+            <tr>
+              <td >Cell 1x4</td>
+              <td >Cell 2x4</td>
+              <td >Cell 3x4</td>
+              <td >Cell 4x4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+          <h2>Hello, My name is Hong Gil Dong.</h2>
+          <div class=Main>
+            <form name="signup" id="signup" action="https://httpbin.org/post" method="Post" autocomplete="on" onsubmit="validateFields()">
+                <!-- onsubmit='return  formValidation();' -->
+    
+                <fieldset>
+                    <legend>Sign Up Page</legend>
+    <p>
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="name" required/>
+    
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" required/>
+                  </p>            
+                    <p>Address: Unit, Street, City, Province, Postal Code</p>
+                    <label for="unitnumber">Unit</label>
+                    <input type="number" id="unitnumber" name="unitnumber" required/>
+    
+                    <label for="streetnumber">Street Number</label>
+                    <input type="number" id="streetnumber" name="streetnumber" required/>
+    
+                    <label for="streetname">Street Name</label>
+                    <input type="text" id="streetname" name="streetname" required/>
+    
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required/>
+    
+                    <label for="province">Province</label>
+                    <select id="province" name="province" >
+                        <option value="Alberta">Alberta</option>
+                        <option value="British Columbia">British Columbia</option>
+                        <option value="Manitoba">Manitoba</option>
+                        <option value="New Brunswick">New Brunswick</option>
+                        <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                        <option value="Nova Scotia">Nova Scotia</option>
+                        <option value="Ontario" selected>Ontario</option>
+                        <option value="Prince Edward Island">Prince Edward Island</option>
+                        <option value="Quebec">Quebec</option>
+                        <option value="Saskatchewan">Saskatchewan</option>
+                    </select>
+                    <br>
+                    
+                    <label for="postalcode">Postal Code</label>
+                    <input type="text" id="postalcode" name="postalcode" required="required" placeholder="ex)C1A1A7" />
+    
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="tel" id="phonenumber" name="phonenumber" title="Phone Number" placeholder="###-##-####" pattern="^\d{3}-\d{3}-\d{4}$" required/>
+    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required/>
+    <br>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" pattern="[A-Za-z]{6,}" required/>
+    
+    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required/>
+    
+                    <label for="checkpassword">Check Password</label>
+                    <input type="password" id="checkpassword" name="checkpassword" required/>
+    
+                    <input type="hidden" name="lastName" id="lastName" value="Lim" />
+                    <input type="hidden" name="studentId" id="studentId" value="149814212" />
+    
+                <button type="submit" name="submit" value="Submit">Submit</button>
+                <button type="reset" name="reset" value="  Clear  " onclick="clearErrors()">Reset</button>
+    
+                <div id="errors"></div>
+    
+            </fieldset>
+            </form>
+          </div>
+      </div>
+       </section>
+  </div>
+    <footer id="bottom_footer">
+        <p>
+            <span>Copyright 2020. cocoder. All Rights Reserved.</span>
+        </p>
+    </footer>
+  </body>
+</html>
